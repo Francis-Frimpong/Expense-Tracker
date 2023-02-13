@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0.7em;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 0.5em;
+  color: rgb(17, 182, 17);
+}
+
+#form-field {
+  margin-top: 1em;
+}
+
+#name {
+  width: 83%;
+  padding: 0.4em;
+  outline: none;
+}
+
+#date {
+  width: 85%;
+  margin-top: 1em;
+  padding: 0.4em;
+  outline: none;
+}
+
+#amount {
+  width: 45%;
+  margin-top: 1em;
+  padding: 0.4em;
+  outline: none;
+}
+
+.btnbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.4em;
+}
+
+.add-btn {
+  background-color: rgb(17, 182, 17);
+  font-size: 1em;
+  padding: 0.4em;
+  border: none;
+  outline: none;
+  color: rgb(240, 232, 232);
+  border-radius: 5px;
+}
+
+.display-data {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.display-data > tr,
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.display-message {
+  background-color: #dddddd;
+  font-size: 1.2em;
+  padding: 0.8em;
+}
+
+.delBtn {
+  color: red;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 4em;
+  }
+  #name {
+    width: 100%;
+    padding: 1em;
+  }
+
+  #date {
+    padding: 1em;
+    width: 30%;
+  }
+
+  #amount {
+    padding: 1em;
+  }
+}
