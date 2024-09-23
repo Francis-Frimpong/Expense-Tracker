@@ -1,7 +1,7 @@
 const addButton = document.querySelector(".add-btn");
 const displayMessage = document.querySelector(".display-message");
 
-// let data = document.querySelector('.data');
+let currentItem = null;
 
 
 
@@ -44,6 +44,21 @@ function add(e) {
 function deleteItem (e) {
   if (e.target.classList.contains('delete')){
     e.target.parentElement.parentElement.remove()
+  }
+}
+
+
+function updateItem(e) {
+  if (e.target.classList.contains('data')){
+    let nameField = document.getElementById("name");
+    let amountField = document.getElementById("amount");
+    let dateField = document.getElementById("date");
+
+    nameField.textContent = e.target.textContent; 
+    amountField.textContent = e.target.textContent; 
+    dateField.textContent = e.target.textContent; 
+
+    currentItem = e.target;
   }
 }
 
