@@ -1,5 +1,6 @@
 const addButton = document.querySelector(".add-btn");
 const displayMessage = document.querySelector(".display-message");
+const formField = document.querySelector('#form-field');
 
 let currentItem = null;
 
@@ -36,8 +37,10 @@ function add(e) {
   tableRow.appendChild(td2);
   tableRow.appendChild(td3);
   tableRow.appendChild(td4);
-
+  
   document.querySelector('.list-item').appendChild(tableRow);
+  
+  clearField()
 }
 
 
@@ -48,24 +51,17 @@ function deleteItem (e) {
 }
 
 
-function updateItem(e) {
-  if (e.target.classList.contains('data')){
-    let nameField = document.getElementById("name");
-    let amountField = document.getElementById("amount");
-    let dateField = document.getElementById("date");
 
-    nameField.textContent = e.target.textContent; 
-    amountField.textContent = e.target.textContent; 
-    dateField.textContent = e.target.textContent; 
 
-    currentItem = e.target;
-  }
-}
+
+
 
 
 //Creating a clickable button functionality
 addButton.addEventListener("click", add);
 
-let clearField = () => formField.reset();
 
-document.querySelector('.list-item').addEventListener('click', deleteItem)
+
+document.querySelector('.list-item').addEventListener('click', deleteItem);
+
+let clearField = () => formField.reset();
