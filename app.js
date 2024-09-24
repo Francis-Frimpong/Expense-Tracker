@@ -39,7 +39,7 @@ function add(e) {
   tableRow.appendChild(td4);
   
   document.querySelector('.list-item').appendChild(tableRow);
-  
+
   clearField()
 }
 
@@ -49,12 +49,6 @@ function deleteItem (e) {
     e.target.parentElement.parentElement.remove()
   }
 }
-
-
-
-
-
-
 
 
 //Creating a clickable button functionality
